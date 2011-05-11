@@ -8,7 +8,7 @@ $(APPDIR)/Info.plist: $(APPDIR)
 	cp Info.plist Test.app/Contents/Info.plist
 
 $(APPDIR)/MacOS/test: $(APPDIR)/MacOS
-	g++ main.cpp -o Test.app/Contents/MacOS/test
+	g++ main.cpp -o Test.app/Contents/MacOS/test -framework Cocoa
 
 $(APPDIR):
 	mkdir -p $(APPDIR)
